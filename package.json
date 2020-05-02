@@ -1,0 +1,22 @@
+{
+  "name": "restful",
+  "version": "1.0.0",
+  "description": "Rest Service",
+  "main": "index.js",
+  "scripts": {
+    "start": "tsc && node src/index.js",
+    "dev": "nodemon index"
+  },
+  "author": "Chetan",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.9.11",
+    "typescript": "^3.8.3"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.6",
+    "@types/mongoose": "^5.7.14",
+    "dotenv": "^8.2.0"
+  }
+}
