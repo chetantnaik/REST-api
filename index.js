@@ -8,16 +8,16 @@ app.use(express.json());
 app.use(express.urlencoded({extended:false}));
 
 //queryData route middleware
-app.use('/api/query',require('./routes/api/queryData'));
+app.use('/api/query',require('./src/routes/api/queryData'));
 
 //postData route middleware
-app.use('/api/add',require('./routes/api/postData'));
+app.use('/api/add',require('./src/routes/api/postData'));
 
 //updateData route middleware
-app.use('/api/update',require('./routes/api/patchData'));
+app.use('/api/update',require('./src/routes/api/patchData'));
 
 //deleteData route middleware
-app.use('/api/delete',require('./routes/api/deleteData'));
+app.use('/api/delete',require('./src/routes/api/deleteData'));
 
 //Connect to database
 mongoose.connect(process.env.DB_CONNECTION, { useNewUrlParser: true, useUnifiedTopology: true },

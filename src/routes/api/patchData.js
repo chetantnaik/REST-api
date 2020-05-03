@@ -10,7 +10,7 @@ patchRouter.patch('/states/:id',async (req,res)=>{
       let data = await statesPatch.updateOne({_id:req.params.id},req.body);
       res.status(200).json({message:`Feature with id of ${req.params.id} updated successfully!`})
     }else{
-      res.status(400).json({message:`No feature with id of ${req.params.id} found!`})
+      res.status(400).json({message:`Found no feature with id of ${req.params.id}!`})
     }
   }catch(err){
     res.status(500).json({message:err})
